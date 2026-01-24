@@ -1,0 +1,407 @@
+ * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* style.css - Design Updates */
+
+/* 1. NEW BACKGROUND */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Add the image */
+    background: url('bg.jpg') no-repeat center center fixed; 
+    background-size: cover; /* Ensures image covers the whole screen */
+    
+    /* Add a dark overlay so text pops */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5); 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 2. ANIMATION FOR THE CARD */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly see-through */
+    padding: 40px;
+    border-radius: 15px; /* Softer corners */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    
+    /* Slide Down Animation */
+    animation: slideDown 0.8s ease-out;
+}
+
+/* Define the Slide Down Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px); /* Start 50px higher */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3. FANCY INPUTS */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px; /* More padding */
+    margin: 10px 0;
+    
+    background-color: #f0f2f5; /* Light grey background inside input */
+    border: 2px solid transparent; /* Hidden border */
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+/* When you click inside the box */
+input:focus {
+    background-color: white;
+    border-color: #007bff; /* Blue border appears */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Blue glow */
+    outline: none;
+}
+
+        /* 3. TYPOGRAPHY */
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* 4. FORM ELEMENTS */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        input:focus {
+            border-color: #007bff; /* Blue highlight on click */
+            outline: none;
+        }
+
+        /* 5. BUTTON STYLING */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff; /* Nice generic blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* 6. LINKS & EXTRAS */
+        .register-link {
+            margin-top: 20px;
+            display: block;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .register-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: #dc3545; /* Red color for errors */
+            background-color: #f8d7da;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        /* Add this to style.css */
+/* style.css */
+
+/* NEW: A Rounded Rectangle Container (Better for your wide logo) */
+.logo-badge {
+    width: 180px;  /* Wider to fit the logo */
+    height: 100px; /* Height matches the logo shape */
+    border-radius: 15px; /* Soft rounded corners (NOT a circle) */
+    
+    background-color: white; 
+    border: 2px solid #007bff; /* Thin blue border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    
+    /* Center it inside the card */
+    margin: 0 auto 20px auto; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Adds space so the logo doesn't touch the edges */
+}
+
+/* Make sure the image fits inside perfectly */
+.logo-badge img {
+    width: 100%;   /* Fill the width of the container */
+    height: 100%;  /* Fill the height */
+    object-fit: contain; /* ESSENTIAL: Ensures the full logo shows without cropping */
+}
+
+/* Reset the login container padding if you haven't already */
+.login-container {
+    background-color: white;
+    padding: 40px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* --- ADMIN PANEL STYLES (Add to bottom of style.css) --- */
+
+/* 1. Wider Container for Admin */
+.admin-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;          /* Takes up 90% of the screen width */
+    max-width: 800px;    /* But stops growing at 800px */
+    margin: 20px auto;   /* Centered */
+    text-align: left;    /* Align text to the left for tables */
+}
+
+/* 2. Top Header with Logout */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    background-color: #dc3545; /* Red for logout */
+    width: auto;
+    padding: 8px 15px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* 3. The Data Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 4. Status Badges (Green for available, etc) */
+.status-available {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-rented {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* 5. Action Links */
+.action-btn {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.edit-btn { background-color: #ffc107; color: #333; } /* Yellow */
+.delete-btn { background-color: #dc3545; color: white; } /* Red */
+
+/* Add to bottom of style.css */
+.truck-thumb {
+    width: 80px;
+    height: 50px;
+    object-fit: cover; /* Crops image nicely to fit */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+/* --- USER DASHBOARD (Card Grid) --- */
+
+/* 1. The Grid Container */
+.truck-grid {
+    display: grid;
+    /* This magic line makes columns automatic (3 on big screens, 1 on phones) */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center everything */
+    width: 100%;
+}
+
+/* 2. The Individual Truck Card */
+.truck-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden; /* Clips the image corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.truck-card:hover {
+    transform: translateY(-5px); /* Floats up slightly when hovered */
+}
+
+/* 3. The Truck Image */
+.card-img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crops center without stretching */
+    border-bottom: 1px solid #eee;
+}
+
+/* 4. Card Content */
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* 5. The "Rent Now" Button */
+.rent-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Pill shape */
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.rent-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 6. Navigation Bar (Simple) */
+.navbar {
+    background-color: white;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* --- RENTAL POP-UP MODAL --- */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Dimmed background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Price Tag on Card */
+.price-tag {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid transparent;
+    background-color: #f0f2f5; /* Light grey match */
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+select:focus {
+    background-color: white;
+    border-color: #007bff; /* Blue border when clicked */
+}
