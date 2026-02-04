@@ -27,7 +27,7 @@
         // Loop through the NEW ASSETS table
         while ($row = oci_fetch_assoc($assets_stid)) {
             
-            // Get variables (Handle potential uppercase/lowercase column names)
+            // fot uppercase and lowercase
             $brand = isset($row['BRAND']) ? $row['BRAND'] : 'N/A';
             $model = isset($row['MODEL']) ? $row['MODEL'] : 'N/A';
             $type = isset($row['ASSET_TYPE']) ? $row['ASSET_TYPE'] : 'Generic';
@@ -59,4 +59,5 @@
     </div>
 
 </body>
+
 </html>
