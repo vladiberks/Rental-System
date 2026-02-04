@@ -39,6 +39,4 @@ PHP: Handles all server-side logic, form processing, user authentication (Login/
 
 CSS: Custom stylesheets for layout, color schemes, and visual hierarchy (no external CSS frameworks used).
 
-HTML: Structure for the web pages.
-
 SQL: Database management (for storing equipment and user data).
